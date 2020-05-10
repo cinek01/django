@@ -1,0 +1,165 @@
+.row {
+  padding-top: 5px;
+  text-align: center;
+}
+
+.card {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  background-color: #cbbeb5;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: inset 0px 0px 0px 3px black;
+  box-sizing: border-box;
+}
+
+.card.done {
+  cursor: default;
+}
+
+.card.done:hover {
+  cursor: default;
+  box-shadow: none;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.teal {
+  background-color: teal;
+}
+
+.color-hidden {
+  background-color: #cbbeb5;
+}
+
+@media only screen and (max-width : 640px) 
+{
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.teal {
+  background-color: teal;
+}
+
+.color-hidden {
+  background-color: #cbbeb5;
+}
+}
+
+@media only screen and (max-width : 480px) 
+{
+.card {
+  display: inline-block;
+  width: 22vw;
+  height: 22vw;
+  background-color: #cbbeb5;
+  cursor: pointer;
+}
+#boxy {
+  border-top: #e8491d 5px solid;
+  background: #35424a;
+  color: #ffffff;
+}
+#boxy .box {
+  float: left;
+  text-align: center;
+  width: 90%;
+  color: white;
+  text-shadow: 1px 1px 1px #000000;
+}
+header #nav {
+	text-align: left;
+  float: left;
+  width: 90vw;
+  height: 25px;
+}
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.cyan {
+  background-color: cyan;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.teal {
+  background-color: teal;
+}
+
+.color-hidden {
+  background-color: #cbbeb5;
+}
+}

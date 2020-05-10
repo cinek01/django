@@ -1,0 +1,113 @@
+{% extends "pwipro/base.html" %}
+{% block content %}
+<script type="text/javascript">
+        function Validuj()
+        {
+            blad = false;
+            Valide("imie", /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]{3,}$/g);
+            Valide("nazwisko", /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]*(-[A-ZĄĘŃŁÓŚĆŻŹ][a-ząćęłńóśźż]*)?$/g);
+            Valide("miasto", /^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]*$/g);
+            Valide("ulica", /^(([0-9]{1,4})\s)?[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]*(\s[A-ZĄĘŃŁÓŚĆŻŹ][a-ząćęłńóśźż]*)?$/g);
+            Valide("nrd", /^[0-9]{1,3}$/g);
+            Valide("nrm", /^[0-9]{1,4}$/g);
+            Valide("nrt", /^[0-9]{9}$/g);
+            Valide("email", /^[-\w\.]+@([-\w]+\.)+[a-z]+$/i);
+            if(blad)
+                alert("Błędne dane!");
+            else
+                alert("Poprawne dane");
+            function Valide(nazwa,argumenty)
+            {
+                element = document.getElementById(nazwa);
+                obiekt = element.value;
+                testy = argumenty.test(obiekt);
+                if(testy)
+                {
+                    document.getElementById(nazwa).style.backgroundColor="white";
+                }
+                else
+                {
+                    document.getElementById(nazwa).style.backgroundColor="red";
+                    blad=true;
+                }
+            }
+        }
+    </script>
+    <h3 style="text-align: center">Formularz</h3>
+        <table border="0" width="30%">
+            <tr>
+                <td colspan="2">
+                    Imię:
+                </td>
+                <td>
+                    <input type="text" name= "imie" id ="imie"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Nazwisko:
+                </td>
+                <td>
+                    <input type="text" name= "nazwisko" id="nazwisko"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Miasto:
+                </td>
+                <td>
+                    <input type="text" name= "miasto" id = "miasto"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Ulica:
+                </td>
+                <td>
+                    <input type="text" name= "ulica" id="ulica"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Numer domu:
+                </td>
+                <td>
+                    <input type="text" name= "nrd" maxlength="3" id ="nrd"/> 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Numer mieszkania:
+                </td>
+                <td>
+                    <input type="text" name= "nrm" maxlength="4" id="nrm"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Numer telefonu:
+                </td>
+                <td>
+                    <input type="text" name= "nrt" maxlength="9"id="nrt"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Adres email:
+                </td>
+                <td>
+                    <input type="text" name= "email" id="email"/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table width="100%" >
+                    <tr>
+                        <input type="submit" name="p1" value="Wyślij" onclick="Validuj()" />
+                    </tr>
+                    </table>
+                </td>
+            </tr>
+    </table>
+    </form>
+{%endblock content%}    

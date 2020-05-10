@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "{% static 'css/base.css' %}" type ="text/css"/>
+  </head>
+<title>Krzysztof Lewiarz | Witamy</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div id="Tytul"><a href="{% url 'pwipro:index' %}">PWI</a></div>
+      <div id="nav">
+        <div class="menu"><a href="{% url 'pwipro:memory' %}">Gra</a></div>
+        <div class="menu"><a href="{% static 'code.zip' %}" download="code.zip" target="_blank">Kod</a></div>
+        <div class="menu"><a href="{% url 'pwipro:form' %}">Formularz</a></div>
+      </div>
+    </div>
+  </header>
+    {% block content %}
+
+    {% endblock content%}
+    <footer>
+      <p>Krzysztof Lewiarz, Copyright &copy; 2020</p>
+    </footer>
+  </body>
+</html>

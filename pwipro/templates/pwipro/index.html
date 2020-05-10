@@ -1,0 +1,29 @@
+{% extends "pwipro/base.html" %}
+{% block content %}
+{% load static %}
+<script src="{% static 'js/index.js' %}"></script> 
+<div id="main">
+</div>
+<div id = "boxy">
+	<div class ="container">
+		<div class="box">
+			<a href="#first" onclick="show_first()">Podtytuł 1</a>
+			<div id="first" class="page">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lobortis pharetra erat ac placerat. Morbi porttitor rutrum mi, nec faucibus neque. Suspendisse potenti. Curabitur lacinia tempor ante vitae dignissim. Phasellus a pretium nisi. Suspendisse condimentum eu leo vel maximus. Proin tempor tristique fermentum. Cras molestie lorem id felis iaculis, et consequat dolor ullamcorper. Aenean convallis ut erat eu blandit. Fusce risus dui, tempus ac consectetur et, eleifend vel felis.</p>
+		</div>
+	</div>
+		<div class="box">
+			<a href="#second" onclick="show_second()">Podtytuł 2</a>
+			<div id="second" class="page">
+			<p>Phasellus ac bibendum diam. Suspendisse aliquam dignissim libero. Nam vehicula orci ac congue malesuada. Nulla ut risus aliquam, mattis ex ac, ultricies dui. Sed magna nisl, convallis ut mollis quis, mattis nec mauris. Proin et diam nibh. Ut convallis euismod nunc vitae commodo. Suspendisse fringilla nisl ac felis tincidunt elementum. Pellentesque elementum neque eu purus fermentum, sit amet aliquam sapien sagittis. Mauris consectetur scelerisque rhoncus.</p>
+		</div>
+	</div>
+		<div class="box">
+			<a href="#third" onclick="show_third()">Podtytuł 3</a>
+			<div id="third" class="page">
+			<p>Aliquam nec est at ligula pretium rutrum. Nunc ultricies tincidunt aliquet. Phasellus nec posuere orci, ac finibus odio. Morbi nisi lacus, maximus eu fringilla in, tempus pharetra est. Phasellus imperdiet dolor vel diam rhoncus, eget aliquam justo cursus. Cras at elementum lacus, ac commodo dui. Curabitur at molestie diam, in tempor elit. Nullam nisl nibh, maximus consectetur nibh non, iaculis tempor sem. Donec tellus dui, sollicitudin vel scelerisque nec, suscipit eget augue. Vivamus id convallis felis.</p>
+		</div>
+	</div>
+	</div>
+</div>
+{%endblock content%}
